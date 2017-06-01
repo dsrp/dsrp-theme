@@ -14,25 +14,31 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 40vh;
 
     text-align: center;
 
-    background: rgb(242, 242, 242) image('network.jpg') no-repeat center fixed;
-    background-size: 200px 200px;
+    background: rgb(242, 242, 242) image('network.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 
-    span {
-        display: block;
-        text-transform: lowercase;
+    // padding-top: 10vh;
+
+    h1 {
+        span {
+            display: block;
+            text-transform: lowercase;
+            opacity: 0.9;
+            mix-blend-mode: multiply;
+        }
     }
 
     .header-ds {
         color: $dsrp-red;
-        font-size: 20pt;
+        font-size: 200%;
     }
 
     .header-rp {
-        color: $dsrp-blue;
-        font-size: 15pt;
+        color: rgba(0, 173, 239, 0.77);
+        font-size: 150%;
     }
 }
