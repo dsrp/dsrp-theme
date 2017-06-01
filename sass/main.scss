@@ -10,12 +10,12 @@ body {
 }
 
 @function bgScrollOffset() {
-    @return round(random()*100) + '%';
+    @return round(random()*100%);
 }
 
 @keyframes headerBgScroll {
     0% { background-position: 0 bgScrollOffset() }
-    100% { background-position: 0 100%}
+    100% { background-position: 0 bgScrollOffset() }
 }
 
 header {
@@ -29,7 +29,7 @@ header {
     background: rgb(242, 242, 242) image('network.jpg') no-repeat;
     background-size: cover;
 
-    animation: headerBgScroll 60s ease-in-out infinite alternate;
+    animation: headerBgScroll 60s linear infinite alternate;
     // padding-top: 10vh;
 
     h1 {
