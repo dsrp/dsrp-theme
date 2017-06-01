@@ -14,8 +14,8 @@ body {
 }
 
 @keyframes headerBgScroll {
-    0% { background-position: 0 bgScrollOffset() }
-    100% { background-position: 0 bgScrollOffset() }
+    0% { background-position: bgScrollOffset() bgScrollOffset() }
+    100% { background-position: bgScrollOffset() bgScrollOffset() }
 }
 
 header {
@@ -27,8 +27,7 @@ header {
     text-align: center;
 
     background: rgb(242, 242, 242) image('network.jpg') no-repeat;
-    background-size: cover;
-
+    background-size: 200vh;
     animation: headerBgScroll 60s linear infinite alternate;
     // padding-top: 10vh;
 
