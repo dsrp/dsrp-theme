@@ -20,7 +20,9 @@ gulp.task('serve', ['sass'], function() {
 
 gulp.task('sass', function () {
   return gulp.src('sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules/purecss-sass/vendor/assets/stylesheets']
+    }).on('error', sass.logError))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
