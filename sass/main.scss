@@ -9,6 +9,15 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@function bgScrollOffset() {
+    @return round(random()*100) + '%';
+}
+
+@keyframes headerBgScroll {
+    0% { background-position: 0 bgScrollOffset() }
+    100% { background-position: 0 100%}
+}
+
 header {
     position: absolute;
     top: 0;
@@ -18,9 +27,9 @@ header {
     text-align: center;
 
     background: rgb(242, 242, 242) image('network.jpg') no-repeat;
-    background-position: 50% 50%;
     background-size: cover;
 
+    animation: headerBgScroll 60s ease-in-out infinite alternate;
     // padding-top: 10vh;
 
     h1 {
