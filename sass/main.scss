@@ -1,9 +1,5 @@
 @import 'purecss';
-
-// Function to return asset path
-@function asset($filename) {
-    @return 'url(../assets/' + $filename + ')'
-}
+@import 'asset-helpers';
 
 // Site-specific defaults
 $dsrp-red: rgb(255, 82, 16);
@@ -14,14 +10,20 @@ body {
 }
 
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+
     text-align: center;
-    background-image: asset(network.jpg);
-    background-color: rgb(242, 242, 242);
+
+    background: rgb(242, 242, 242) image('network.jpg') no-repeat center fixed;
+    background-size: 200px 200px;
 
     span {
         display: block;
         text-transform: lowercase;
-
     }
 
     .header-ds {
