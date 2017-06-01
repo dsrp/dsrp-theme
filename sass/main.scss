@@ -34,19 +34,26 @@ header {
     h1 {
         span {
             display: block;
-            text-transform: lowercase;
-            opacity: 0.9;
-            mix-blend-mode: multiply;
         }
-    }
 
-    .header-ds {
-        color: $dsrp-red;
-        font-size: 200%;
-    }
+        text-transform: lowercase;
+        opacity: 0.9;
+        mix-blend-mode: multiply;
 
-    .header-rp {
-        color: rgba(0, 173, 239, 0.77);
-        font-size: 150%;
+        // Typographic spacing
+        letter-spacing: 0.025ch;
+        line-height: 160%;
+
+        .header-ds {
+            color: $dsrp-red;
+            font-size: 44pt;
+            margin-left: -0.3em;
+        }
+
+        .header-rp {
+            color: rgba(0, 173, 239, 0.77);
+            font-size: 30pt;
+            margin-left: 1.2em;
+        }
     }
 }
