@@ -1,5 +1,36 @@
 @import 'purecss';
 
-.header {
-    background-color: red;
+// Function to return asset path
+@function asset($filename) {
+    @return 'url(../assets/' + $filename + ')'
+}
+
+// Site-specific defaults
+$dsrp-red: rgb(255, 82, 16);
+$dsrp-blue: rgb(0, 173, 239);
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-image: asset(network.jpg);
+    background-color: rgb(242, 242, 242);
+
+    span {
+        display: block;
+        text-transform: lowercase;
+
+    }
+
+    .header-ds {
+        color: $dsrp-red;
+        font-size: 20pt;
+    }
+
+    .header-rp {
+        color: $dsrp-blue;
+        font-size: 15pt;
+    }
 }
