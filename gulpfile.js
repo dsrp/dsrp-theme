@@ -4,9 +4,10 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var sass = require('gulp-sass');
 
 // watch files for changes and reload
-gulp.task('serve', function() {
+gulp.task('serve', ['sass'], function() {
   browserSync({
     server: {
       baseDir: 'app'
@@ -14,6 +15,14 @@ gulp.task('serve', function() {
   });
 
   gulp.watch(['*.html', 'styles/**/*.css', 'scripts/**/*.js'], {cwd: 'app'}, reload);
+  gulp.watch('sass/**/*.scss', ['sass']);
+});
+
+gulp.task('sass', function () {
+  return gulp.src('sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('app/styles'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['serve']);
