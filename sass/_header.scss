@@ -15,8 +15,10 @@ header {
 
     text-align: center;
 
+    // Background animation
     background: rgb(242, 242, 242) image('network.jpg') center repeat-x;
     background-size: 200vh;
+    will-change: background-position;
     animation: headerBgScroll 60s linear infinite alternate;
 
     nav {
