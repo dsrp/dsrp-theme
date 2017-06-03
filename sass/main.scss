@@ -31,6 +31,10 @@ header {
     animation: headerBgScroll 60s linear infinite alternate;
     // padding-top: 10vh;
 
+    nav {
+        height: 16pt;
+    }
+
     h1 {
         span {
             display: block;
@@ -41,19 +45,21 @@ header {
         mix-blend-mode: multiply;
 
         // Typographic spacing
-        letter-spacing: 0.025ch;
-        line-height: 160%;
+        line-height: 33pt;
 
         .header-ds {
             color: $dsrp-red;
-            font-size: 44pt;
-            margin-left: -0.3em;
+            font-size: 37pt;
+            margin-left: -0.1ch;
+            word-spacing: -0.3ch;
+            letter-spacing: 0.02ch;
         }
 
         .header-rp {
             color: rgba(0, 173, 239, 0.77);
-            font-size: 30pt;
-            margin-left: 1.2em;
+            font-size: 25pt;
+            margin-left: 2.9ch;
+            letter-spacing: 0.01ch;
         }
     }
 }
