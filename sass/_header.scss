@@ -21,21 +21,26 @@ header {
 
     nav {
         font-size: $menu-font-size;
-        // transform: rotateZ(0);
-        // font-smooth: never;
-        // font-weight: normal;
-        // transform:rotateZ(0);
     }
 
     h1 {
-        float: none;
+        // Make sure menu's from above don't interfere
         clear: both;
 
+        // Make each span appear on a new line
         span {
             display: block;
         }
 
+        // Don't underline links
+        a {
+            text-decoration: none;
+        }
+
+        // header is lowercase
         text-transform: lowercase;
+
+        // Specific styling and typography
         opacity: 0.9;
         mix-blend-mode: multiply;
 
