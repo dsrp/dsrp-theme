@@ -7,6 +7,8 @@
     100% { background-position: bgScrollOffset() bgScrollOffset() }
 }
 
+$menu-width: 14ch;
+
 .menu-main {
     float: left;
 }
@@ -17,6 +19,38 @@
     // Hide on small screens
     @media screen and (max-width: 35.5em) {
         display: none !important;
+    }
+}
+
+.content-wrapper {
+    transform: translateX($menu-width);
+}
+
+.menu-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $menu-width;
+    height: 100vh;
+    text-align: left;
+    font-size: $menu-font-size - 2pt;
+
+    // Move menu away from screen
+    // transform: translateX(-100%);
+
+    background-color: rgba(10,10,10,0.7);
+
+    .pure-menu-link {
+        color: rgb(240, 240, 240);
+    }
+
+    .menu-close {
+        float: right;
+    }
+
+    // Full width on small screens
+    @media screen and (max-width: 35.5em) {
+        width: 100vw;
     }
 }
 
