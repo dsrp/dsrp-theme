@@ -1,0 +1,81 @@
+@function bgScrollOffset() {
+    @return round(random()*100%);
+}
+
+@keyframes headerBgScroll {
+    0% { background-position: bgScrollOffset() bgScrollOffset() }
+    100% { background-position: bgScrollOffset() bgScrollOffset() }
+}
+
+// <ul> as horizontal menu
+ul.menu-left, ul.menu-right {
+    list-style-type: none;
+    // margin: 0;
+    // padding: 0;
+    overflow: hidden;
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111111;
+    }
+}
+
+ul.menu-left > li  {
+    float: left;
+}
+
+ul.menu-right > li {
+    float: right;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    text-align: center;
+
+    background: rgb(242, 242, 242) image('network.jpg') center repeat-x;
+    background-size: 200vh;
+    animation: headerBgScroll 60s linear infinite alternate;
+
+    nav {
+        font-size: 11px;
+        transform:rotateZ(0);
+    }
+
+    h1 {
+        span {
+            display: block;
+        }
+
+        text-transform: lowercase;
+        opacity: 0.9;
+        mix-blend-mode: multiply;
+
+        line-height: 5.4vw;
+
+        .header-ds {
+            color: $dsrp-red;
+            font-size: 6vw;
+            margin-left: -0.1ch;
+            word-spacing: -0.3ch;
+            letter-spacing: 0.02ch;
+        }
+
+        .header-rp {
+            color: rgba(0, 173, 239, 0.77);
+            font-size: 4vw;
+            margin-left: 2.9ch;
+            letter-spacing: 0.01ch;
+        }
+    }
+}
