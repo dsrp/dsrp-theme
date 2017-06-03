@@ -25,10 +25,9 @@ header {
 
     text-align: center;
 
-    background: rgb(242, 242, 242) image('network.jpg') no-repeat;
+    background: rgb(242, 242, 242) image('network.jpg') center repeat-x;
     background-size: 200vh;
     animation: headerBgScroll 60s linear infinite alternate;
-    // padding-top: 10vh;
 
     nav {
         height: 16pt;
@@ -43,7 +42,6 @@ header {
         opacity: 0.9;
         mix-blend-mode: multiply;
 
-        // Typographic spacing
         line-height: 33pt;
 
         .header-ds {
