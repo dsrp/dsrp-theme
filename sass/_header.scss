@@ -7,6 +7,14 @@
     100% { background-position: bgScrollOffset() bgScrollOffset() }
 }
 
+.menu-main {
+    float: left;
+}
+
+.menu-social {
+    float: right;
+}
+
 header {
     position: absolute;
     top: 0;
