@@ -36,6 +36,16 @@ header {
 
     nav {
         font-size: $menu-font-size;
+
+        form {
+            display: inline;
+        }
+
+        input {
+            height: $menu-font-size + 2pt;
+            font-size: $menu-font-size - 4pt;
+            width: 16ch;
+        }
     }
 
     h1 {
