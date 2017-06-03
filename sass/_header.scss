@@ -7,8 +7,6 @@
     100% { background-position: bgScrollOffset() bgScrollOffset() }
 }
 
-$menu-width: 14ch;
-
 .menu-main {
     float: left;
 }
@@ -22,8 +20,13 @@ $menu-width: 14ch;
     }
 }
 
-.content-wrapper {
-    transform: translateX($menu-width);
+$close-button-offset: 2em;
+$menu-width: 16em;
+
+body {
+    @media screen and (min-width: 35.5em) {
+        transform: translateX($menu-width + 3em);
+    }
 }
 
 .menu-full {
@@ -32,13 +35,12 @@ $menu-width: 14ch;
     left: 0;
     width: $menu-width;
     height: 100vh;
+
+    padding-top: $close-button-offset;
     text-align: left;
     font-size: $menu-font-size - 2pt;
 
-    // Move menu away from screen
-    // transform: translateX(-100%);
-
-    background-color: rgba(10,10,10,0.7);
+    background-color: grey;
 
     .pure-menu-link {
         color: rgb(240, 240, 240);
@@ -46,16 +48,23 @@ $menu-width: 14ch;
 
     .menu-close {
         float: right;
+        margin-top: -$close-button-offset;
+        font-size: $menu-font-size;
     }
 
     // Full width on small screens
     @media screen and (max-width: 35.5em) {
         width: 100vw;
     }
+
+    @media screen and (min-width: 35.5em) {
+        // Move menu away from screen
+        transform: translateX(-100%);
+    }
 }
 
 header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
