@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
 var sassOptions = {
-  includePaths: ['node_modules/purecss-sass/vendor/assets/stylesheets']
+  includePaths: []
 };
 
 // watch files for changes and reload
