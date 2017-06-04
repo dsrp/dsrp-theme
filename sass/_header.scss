@@ -31,6 +31,10 @@
     }
 }
 
+.search-container {
+    z-index: 1;
+}
+
 $close-button-offset: 2em;
 $menu-width: 14rem;
 
@@ -96,7 +100,7 @@ header {
         input {
             height: $menu-font-size + 2pt;
             font-size: $menu-font-size - 4pt;
-            width: 16ch;
+            width: 14ch;
         }
     }
 
@@ -121,11 +125,11 @@ header {
         opacity: 0.9;
         mix-blend-mode: multiply;
 
-        line-height: 5.4vw;
+        line-height: calc(6pt + 5.4vw);
 
         .header-ds {
             color: $dsrp-red;
-            font-size: 6vw;
+            font-size: calc(6pt + 6vw);
             margin-left: -0.1ch;
             word-spacing: -0.3ch;
             letter-spacing: 0.02ch;
@@ -133,7 +137,7 @@ header {
 
         .header-rp {
             color: rgba(0, 173, 239, 0.77);
-            font-size: 4vw;
+            font-size: calc(8pt + 4vw);
             margin-left: 2.9ch;
             letter-spacing: 0.01ch;
         }
