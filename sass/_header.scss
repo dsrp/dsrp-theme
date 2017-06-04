@@ -21,18 +21,18 @@
 }
 
 $close-button-offset: 2em;
-$menu-width: 16em;
+$menu-width: 250px;
 
 body {
     @media screen and (min-width: 35.5em) {
-        transform: translateX($menu-width + 3em);
+        transform: translateX($menu-width);
     }
 }
 
 .menu-full {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -$menu-width;
     width: $menu-width;
     height: 100vh;
 
@@ -55,11 +55,7 @@ body {
     // Full width on small screens
     @media screen and (max-width: 35.5em) {
         width: 100vw;
-    }
-
-    @media screen and (min-width: 35.5em) {
-        // Move menu away from screen
-        transform: translateX(-100%);
+        left: 0;
     }
 }
 
