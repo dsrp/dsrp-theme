@@ -1,14 +1,9 @@
+@import 'variables';
 @import 'purecss';
 @import 'asset-helpers';
-
-// Site-specific defaults
-$dsrp-red: rgb(255, 82, 16);
-$dsrp-blue: rgb(0, 173, 239);
-
-$menu-font-size: 16pt;
+@import 'hamburgers';
+@import 'header';
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font-family;
 }
-
-@import 'header.scss';
