@@ -21,9 +21,9 @@
 }
 
 $close-button-offset: 2em;
-$menu-width: 250px;
+$menu-width: 16rem;
 
-body {
+.content-wrapper {
     @media screen and (min-width: 35.5em) {
         transform: translateX($menu-width);
     }
@@ -40,10 +40,14 @@ body {
     text-align: left;
     font-size: $menu-font-size - 2pt;
 
-    background-color: grey;
+    background-color: #888;
+    // border-right-style: 10px solid ;
+    border-right: 4px solid #666;
+    z-index: 10;
 
     .pure-menu-link {
         color: rgb(240, 240, 240);
+        border: 1px solid #999;
     }
 
     .menu-close {
