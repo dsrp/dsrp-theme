@@ -7,3 +7,8 @@
 body {
     font-family: $font-family;
 }
+
+// Make click react much faster (saves ~300 ms delay!)
+html {
+  touch-action: manipulation;
+}
