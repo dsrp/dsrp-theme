@@ -20,6 +20,17 @@
     }
 }
 
+// Hiding/showing search field
+#search-field {
+    opacity: 0.0;
+    will-change: opacity;
+    transition: opacity 0.3s ease-in-out;
+
+    &.is-active {
+        opacity: 1.0;
+    }
+}
+
 $close-button-offset: 2em;
 $menu-width: 14rem;
 
