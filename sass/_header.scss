@@ -23,9 +23,14 @@
 $close-button-offset: 2em;
 $menu-width: 16rem;
 
-.content-wrapper {
-    @media screen and (min-width: 35.5em) {
-        transform: translateX($menu-width);
+@media screen and (min-width: 35.5em) {
+    .content-wrapper {
+        &.menu-open {
+            transform: translateX($menu-width);
+        }
+
+        will-change: transform;
+        transition: transform 1s ease-in-out;
     }
 }
 
