@@ -34,15 +34,13 @@
 $close-button-offset: 2em;
 $menu-width: 14rem;
 
-@media screen and (min-width: 35.5em) {
-    .content-wrapper {
-        &.menu-open {
-            transform: translateX($menu-width);
-        }
-
-        will-change: transform;
-        transition: transform 0.3s ease-in-out;
+.content-wrapper {
+    &.menu-open {
+        transform: translateX($menu-width);
     }
+
+    will-change: transform;
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu-full {
@@ -72,11 +70,6 @@ $menu-width: 14rem;
         font-size: $menu-font-size;
     }
 
-    // Full width on small screens
-    @media screen and (max-width: 35.5em) {
-        width: 100vw;
-        left: 0;
-    }
 }
 
 header {
